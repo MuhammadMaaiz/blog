@@ -5,7 +5,7 @@ blogs = []
 
 root = tk.Tk()
 root.title("Blog Application")
-root.geometry("800x600")
+root.geometry("5000x5000")
 root.configure(bg="light pink")
 
 def add_blog():
