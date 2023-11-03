@@ -37,7 +37,7 @@ def add_blog():
 def validate_date_format(date):
     try:
         day, month, year = map(int, date.split('/'))
-        if 1 <= day <= 31 and 1 <= month <= 12:
+        if 1 <= day <= 31 and 1 <= month <= 12 and 2020 <= year:
             return True
         else:
             return False
@@ -133,7 +133,7 @@ def save_updated_blog():
 
 root = tk.Tk()
 root.title("Blog Application")
-root.geometry("4000x4000")
+root.geometry("2000x2000")
 root.configure(bg="light pink")
 
 notebook = ttk.Notebook(root)
@@ -143,10 +143,10 @@ input_frame = tk.Frame(notebook, bg="light pink")
 notebook.add(input_frame, text="Add Blog")
 
 font_style = ("Arial", 20)
-label_font = ("Arial", 20)
+label_font = ("Arial", 25)
 entry_font = ("Arial", 16)
-#lb_bg = '#E6E6FA'
-lb_bg = '#AEEEEE'
+lb_bg = ("light pink")
+
 date_label = tk.Label(input_frame, text="Date", font=label_font, bg = lb_bg)
 date_label.pack()
 date_entry = tk.Entry(input_frame, font=entry_font)
@@ -204,22 +204,22 @@ style.configure("TFrame", background="light pink")
 third_page = ttk.Frame(notebook, style="TFrame")
 notebook.add(third_page, text="Third Page")
 
-update_date_label = tk.Label(third_page, text="Date", font=label_font)
+update_date_label = tk.Label(third_page, text="Date", font=label_font,bg=lb_bg)
 update_date_label.pack()
 update_date_entry = tk.Entry(third_page, font=entry_font)
 update_date_entry.pack(padx=5, pady=5)
 
-update_title_label = tk.Label(third_page, text="Title", font=label_font)
+update_title_label = tk.Label(third_page, text="Title", font=label_font,bg=lb_bg)
 update_title_label.pack()
 update_title_entry = tk.Entry(third_page, font=entry_font)
 update_title_entry.pack(padx=5, pady=5)
 
-update_author_label = tk.Label(third_page, text="Author", font=label_font)
+update_author_label = tk.Label(third_page, text="Author", font=label_font,bg=lb_bg)
 update_author_label.pack()
 update_author_entry = tk.Entry(third_page, font=entry_font)
 update_author_entry.pack(padx=5, pady=5)
 
-update_content_label = tk.Label(third_page, text="Content", font=label_font)
+update_content_label = tk.Label(third_page, text="Content", font=label_font,bg=lb_bg)
 update_content_label.pack()
 update_content_text = scrolledtext.ScrolledText(third_page, wrap=tk.WORD, width=134, height=18, font=("Arial", 12))
 update_content_text.pack(padx=5, pady=5)
