@@ -72,10 +72,10 @@ def update_second_page_content():
         content_text.insert(tk.INSERT, blog['Content'])
         content_text.pack(padx=5, pady=5)
 
-        delete_button = tk.Button(blog_frame, text="Delete", command=lambda index=index: delete_blog(index), font=("Arial", 12))
+        delete_button = tk.Button(blog_frame, text="Delete", command=lambda index=index: delete_blog(index), font=("Arial", 12),bg= "red")
         delete_button.pack(side=tk.LEFT, padx=10, pady=10)
 
-        update_button = tk.Button(blog_frame, text="Update", command=lambda index=index: update_blog(index), font=("Arial", 12))
+        update_button = tk.Button(blog_frame, text="Update", command=lambda index=index: update_blog(index), font=("Arial", 12),bg="green")
         update_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
     # Update the canvas to accommodate the new content
@@ -133,7 +133,7 @@ def save_updated_blog():
 
 root = tk.Tk()
 root.title("Blog Application")
-root.geometry("2000x2000")
+root.geometry("10000x10000")
 root.configure(bg="light pink")
 
 notebook = ttk.Notebook(root)
@@ -171,7 +171,7 @@ content_text = scrolledtext.ScrolledText(input_frame, wrap=tk.WORD, width=100, h
 content_text.pack(padx=5, pady=5)
 content_text.config(fg="black")
 
-add_blog_button = tk.Button(input_frame, text="Add Blog", command=add_blog, font=("Arial", 17))
+add_blog_button = tk.Button(input_frame, text="Add Blog", command=add_blog, font=("Arial", 17),bg="black",fg="gold")
 add_blog_button.pack()
 
 second_page = ttk.Frame(notebook)
@@ -224,7 +224,7 @@ update_content_label.pack()
 update_content_text = scrolledtext.ScrolledText(third_page, wrap=tk.WORD, width=134, height=18, font=("Arial", 12))
 update_content_text.pack(padx=5, pady=5)
 
-update_save_button = tk.Button(third_page, text="Save Update", command=save_updated_blog, font=("Arial", 17))
+update_save_button = tk.Button(third_page, text="Save Update", command=save_updated_blog, font=("Arial", 17),bg="black",fg="gold")
 update_save_button.pack()
 
 root.mainloop()
