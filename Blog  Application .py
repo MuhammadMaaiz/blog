@@ -16,7 +16,7 @@ def add_blog():
     content_exists = any(blog["Content"] == content for blog in blogs)
 
     if not content_exists:
-        # Validate the date format using a function
+        # Validate the date format using a function.
         if not validate_date_format(date):
             messagebox.showerror("Invalid Date", "Please enter a valid date in DD/MM/YYYY format")
             return
