@@ -37,7 +37,7 @@ def add_blog():
 def validate_date_format(date):
     try:
         day, month, year = map(int, date.split('/'))
-        if 1 <= day <= 31 and 1 <= month <= 12 and 2020 <= year:
+        if 1 <= day <= 31 and 1 <= month <= 12 and 2020 <= year <=2025:
             return True
         else:
             return False
@@ -167,7 +167,7 @@ author_entry.config(fg="black")
 
 content_label = tk.Label(input_frame, text="Content", font=label_font, bg = lb_bg)
 content_label.pack()
-content_text = scrolledtext.ScrolledText(input_frame, wrap=tk.WORD, width=100, height=14, font=entry_font)
+content_text = scrolledtext.ScrolledText(input_frame, wrap=tk.WORD, width=100, height=13, font=entry_font)
 content_text.pack(padx=5, pady=5)
 content_text.config(fg="black")
 
@@ -221,7 +221,7 @@ update_author_entry.pack(padx=5, pady=5)
 
 update_content_label = tk.Label(third_page, text="Content", font=label_font,bg=lb_bg)
 update_content_label.pack()
-update_content_text = scrolledtext.ScrolledText(third_page, wrap=tk.WORD, width=134, height=18, font=("Arial", 12))
+update_content_text = scrolledtext.ScrolledText(third_page, wrap=tk.WORD, width=100, height=18, font=("Arial", 12))
 update_content_text.pack(padx=5, pady=5)
 
 update_save_button = tk.Button(third_page, text="Save Update", command=save_updated_blog, font=("Arial", 17),bg="black",fg="gold")
