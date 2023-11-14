@@ -227,3 +227,5 @@ update_save_button = tk.Button(third_page, text="Save Update.", command=save_upd
 update_save_button.pack()
 
 root.mainloop()
+
+print("Maaiz")
