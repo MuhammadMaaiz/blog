@@ -8,7 +8,6 @@ def add_blog():
     title = title_entry.get()
     author = author_entry.get()
     content = content_text.get("1.0", tk.END)
-
     if not date or not title or not author or not content:
         return
 
@@ -224,7 +223,7 @@ update_content_label.pack()
 update_content_text = scrolledtext.ScrolledText(third_page, wrap=tk.WORD, width=100, height=18, font=("Arial", 12))
 update_content_text.pack(padx=5, pady=5)
 
-update_save_button = tk.Button(third_page, text="Save Update", command=save_updated_blog, font=("Arial", 17),bg="black",fg="gold")
+update_save_button = tk.Button(third_page, text="Save Update.", command=save_updated_blog, font=("Arial", 17),bg="black",fg="gold")
 update_save_button.pack()
 
 root.mainloop()
